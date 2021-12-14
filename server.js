@@ -9,6 +9,8 @@ let HTTP_PORT = process.env.PORT || 8080;
 // global users array
 let Users = [];
 
+app.use(express.static('views/images'));
+
 app.engine(
     ".hbs",
     handle_bars.engine({
@@ -37,7 +39,6 @@ app.engine(
                     return options.fn(this);
                 }
             },
-
             // increment number passed in by 1
             inc: function(value) {
                 return parseInt(value + 1);
@@ -70,7 +71,7 @@ app.get("/about", function(request, response) {
 
 // donate page
 app.get("/donate", function(request, response) {
-    response.render("donate"); // TODO: pass in device name to be rendered dymnically
+    response.render("donate");
 })
 
 app.post("/donate", function(request, response) {
