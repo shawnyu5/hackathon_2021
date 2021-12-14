@@ -1,6 +1,7 @@
 let express = require("express");
 let path = require("path")
-let handle_bars = require("express-handlebars")
+let handle_bars = require("express-handlebars");
+const { response } = require("express");
 let app = express();
 
 
@@ -52,12 +53,28 @@ function onStart() {
     console.log("Express http server listening on " + HTTP_PORT);
 }
 
+// home page
 app.get("/", function(request, response) {
     response.render("home")
 });
 
+// about page
 app.get("/about", function(request, response) {
     response.render("about");
+});
+
+// donate page
+app.get("/donate", function(request, response) {
+    response.render("donate"); // TODO: pass in device name to be rendered dymnically
+})
+
+app.post("/donate", function(request, response) {
+    console.log("this is post");
+    console.log(request.body);
+})
+
+app.get("*", function(request, response) {
+    response.status(404).send("404 PAGE NOT FOUND");
 });
 
 app.listen(HTTP_PORT, onStart);
