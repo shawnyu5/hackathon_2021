@@ -4,7 +4,7 @@
 
 * Welcome message
 
-* Checkout now button -> select my device page
+* Checkout now butejqioejton -> select my device page
 
 ## Select my device
 
