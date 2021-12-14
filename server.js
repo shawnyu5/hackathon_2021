@@ -83,12 +83,16 @@ app.post("/donate", function(request, response) {
 // locations
 app.get("/locations", function(request, response) {
     response.render("locations");
-})
+});
 
 // devices
 app.get("/devices", function(request, reponse) {
     reponse.render("devices")
-})
+});
+
+app.get("/devices/iphone11", function(request, response) {
+    response.render("iphone11");
+});
 
 app.get("*", function(request, response) {
     response.status(404).send("404 PAGE NOT FOUND");
