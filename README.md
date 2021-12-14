@@ -10,7 +10,7 @@
 
 Choice of:
 
-* Phones -> select model -> recycle device or donate
+* Phones -> select model and device(drop-down menu) -> recycle device or donate
 
 * Computers
 
