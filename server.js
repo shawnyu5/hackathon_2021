@@ -85,6 +85,10 @@ app.get("/locations", function(request, response) {
     response.render("locations");
 })
 
+// devices
+app.get("/devices", function(request, reponse) {
+    reponse.render("devices")
+})
 
 app.get("*", function(request, response) {
     response.status(404).send("404 PAGE NOT FOUND");
