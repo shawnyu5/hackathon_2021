@@ -80,9 +80,12 @@ app.post("/donate", function(request, response) {
     })
 });
 
+// locations
 app.get("/locations", function(request, response) {
     response.render("locations");
 })
+
+
 app.get("*", function(request, response) {
     response.status(404).send("404 PAGE NOT FOUND");
 });
