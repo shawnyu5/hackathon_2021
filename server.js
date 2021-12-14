@@ -1,11 +1,13 @@
 let express = require("express");
-let path = require("path")
 let handle_bars = require("express-handlebars");
-const { response } = require("express");
+let fs = require("fs");
+let dataService = require("./data-service")
+// const { response } = require("express");
 let app = express();
-
-
 let HTTP_PORT = process.env.PORT || 8080;
+
+// global users array
+let Users = [];
 
 app.engine(
     ".hbs",
@@ -50,7 +52,10 @@ app.set("view engine", ".hbs");
 app.use(express.urlencoded({ extended: true }));
 
 function onStart() {
-    console.log("Express http server listening on " + HTTP_PORT);
+    dataService.initialize()
+    .then(function() {
+        console.log("Express http server listening on " + HTTP_PORT);
+    })
 }
 
 // home page
@@ -69,9 +74,11 @@ app.get("/donate", function(request, response) {
 })
 
 app.post("/donate", function(request, response) {
-    console.log("this is post");
-    console.log(request.body);
-})
+    dataService.addDevice(request.body)
+    .then(function(message) {
+        response.redirect("/");
+    })
+});
 
 app.get("*", function(request, response) {
     response.status(404).send("404 PAGE NOT FOUND");
