@@ -45,7 +45,6 @@ app.engine(
 
 app.set("view engine", ".hbs");
 
-
 //enable midware to parse plain text
 app.use(express.urlencoded({ extended: true }));
 
@@ -58,7 +57,7 @@ app.get("/", function(request, response) {
 });
 
 app.get("/about", function(request, response) {
-    response.send("this is about page");
+    response.render("about");
 });
 
 app.listen(HTTP_PORT, onStart);

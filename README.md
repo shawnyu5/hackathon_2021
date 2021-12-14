@@ -4,7 +4,7 @@
 
 * Welcome message
 
-* Checkout now button -> sleet my device page
+* Checkout now button -> select my device page
 
 ## Select my device
 
@@ -16,6 +16,11 @@ Choice of:
 
 * Other items
 
+## About the device
+
+* Shows information about a certain device
+
+* Feed back form
 
 ### recycle your device
 
@@ -25,4 +30,10 @@ Google maps showing recycling hubs (TOO MUCH?)
 
 Contact info form with device info.
 
+  * Name
 
+  * Phone number
+
+  * Address
+
+  * Type of device + model number
