@@ -1,56 +1,67 @@
 <!DOCTYPE html>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Donate</h2>
-            <br />
-            <form method="post" action="/donate">
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <style> -->
+<!-- body {background-color: powderblue;} -->
 
-                <fieldset>
-                    <legend><!-- Personal Information --></legend>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input class="form-control" id="name" name="name" type="text" />
-                            </div>
-                        </div>
+<!-- </style> -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Donate</h2>
+                <br />
+                <form method="post" action="/donate">
 
+                    <fieldset>
+                        <legend><!-- Personal Information --></legend>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input class="form-control" id="email" name="email" type="email" />
+                                    <label for="name">Name:</label>
+                                    <input class="form-control" id="name" name="name" type="text" />
                                 </div>
                             </div>
 
-                            <div class="col-md-10">
-                                <div class="form-group">
-                                    <label for="address">Address:</label>
-                                    <input class="form-control" id="address" name="address" type="text"  />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input class="form-control" id="email" name="email" type="email" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label for="address">Address:</label>
+                                        <input class="form-control" id="address" name="address" type="text"  />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div>
-                            <div class="col-md-6">
-                                <label for="deviceType">Device Type:</label>
-                                <input class="form-control" id="deviceType" name="deviceType" type="text"  />
+                            <div>
+                                <div class="col-md-6">
+                                    <label for="deviceType">Device Type:</label>
+                                    <input class="form-control" id="deviceType" name="deviceType" type="text"  />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="modelNumber" required>Model Number</label>
+                                    <input class="form-control" id="modelNumber" name="modelNumber" type="text"  />
+                                </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <label for="modelNumber" required>Model Number</label>
-                                <input class="form-control" id="modelNumber" name="modelNumber" type="text"  />
-                            </div>
+                    </fieldset>
+
+                    <hr />
+
+                    <input type="submit" class="btn btn-primary pull-right" value="Submit" /><br /><br /><br />
+
+                </form>
                         </div>
-
-                </fieldset>
-
-                <hr />
-
-                <input type="submit" class="btn btn-primary pull-right" value="Submit" /><br /><br /><br />
-
-            </form>
-                    </div>
+            </div>
         </div>
-    </div>
+</body>
+</html>
