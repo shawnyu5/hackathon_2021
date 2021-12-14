@@ -57,4 +57,8 @@ app.get("/", function(request, response) {
     response.render("home")
 });
 
+app.get("/about", function(request, response) {
+    response.send("this is about page");
+});
+
 app.listen(HTTP_PORT, onStart);
