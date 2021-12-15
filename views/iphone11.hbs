@@ -3,46 +3,104 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
+  /* (A) SET CONTAINER TO GRID */
+    .column {
+      float: left;
+      width: 33.33%;
+    }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
+    /* Stops the float property from affecting content after the columns */
+    .columns:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .box {
+      width: 320px;
+      padding: 10px;
+      border: 5px solid gray;
+      margin: 0;
+      height: 400px;
+      background-color: grey;
+    }
+
+    .blurb {
+      width: 1082px;
+      padding: 20px;
+      border: 6px solid gray;
+      margin: 0;
+      height: 100px;
+      background-color: grey;
+    }
 </style>
 </head>
-<body>
-       </img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="yo">
-	<body style="background-color:#9AD1C1;"></body>
-<h2>Your device is: iPhone 11</h2>
- 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Components</h2>
+<body style="background-color:#9AD1C1;">
+  <div class="columns">
+    <div class="column" style="font-size:40px;">
+      <b>Components</b>
+      <div class="box" style="font-size:20px;">
+        Gold<br>
+        Copper<br>
+        Silver<br>
+        Plastic<br>
+        Silica<br>
+        Plastic<br>
+        Iron<br>
+        Aluminium<br>
+        Lead<br>
+        Zinc<br>
+        Tin<br>
+        Nickel<br>
+        Barium<br>
+      </div>
+    </div>
+    <div class="column" style="font-size:40px;">
+      <b>Precious Metals</b>
 
-    <p>Some text..</p>
+      <div class="box" style="font-size:20px;">
+        Gold <br>
+        Silver<br>
+        Copper<br>
+        Platinum<br>
+        Palladium<br>
+      </div>
+    </div>
+    <div class="column" style="font-size:40px;">
+      <b>Toxic Chemicals</b>
+      <div class="box" style="font-size:20px;">
+        Lead<br>
+        Mercury<br>
+        Arsenic<br>
+        Cadmium<br>
+        Chlorine<br>
+        Bromine<br>
+      </div>
+    </div>
   </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Toxic Materials</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#ccc;">
-    <h2>Precious Metals</h2>
-    <p>Some text..</p>
-  </div>
+  <div class="coloumn">
+    <p style="color:#9AD1C1">
+      dasdad
+    </p>
+    <div class="blurb">
+<p style="font-size: 20px;">Your device contains elements, minerals and metals worth approximate range of 65 USD to 260 USD</p>
+
 </div>
+  </div>
+   <div class="coloumn">
+    <p style="color:#9AD1C1">
+      dasdad
+    </p>
+    <div class="blurb" style="background-color:#9AD1C1;">
+<p style="font-size: 20px;">The elements, minerals and metals found in your device if not recycled properly will end up in landfills and contaminate air, water and land</p>
+
+</div>
+  </div>
+
+  </div>
+
+  </div>
+  </div>
 
 </body>
 </html>
@@ -50,5 +108,5 @@
 <br>
 <br>
 
-
-<a type="button" class="btn btn-success" style="font-size: 23px" href="/Locations">Recycle!</a>
+<div style="position:absolute; left:200px; top:840px;"><a type="button" class="btn btn-success" style="font-size: 30px" href="/Locations">Recycle!</a>
+</div>
