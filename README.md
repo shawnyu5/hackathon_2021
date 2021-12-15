@@ -1,39 +1,10 @@
-# Routes
+# Hackathon 2021 demo
 
-## Home
+A web application written in JavaScript using express JS, with a connection to a
+database in the back end. Written and deployed in a single day.
 
-* Welcome message
+## Building
 
-* Checkout now button -> select my device page
+1. `npm install` to install all dependencies.
 
-## Select my device
-
-Choice of:
-
-* Phones -> select model and device(drop-down menu) -> recycle device or donate
-
-* Computers
-
-* Other items
-
-## About the device
-
-* Shows information about a certain device
-
-* Feed back form
-
-### recycle your device
-
-Google maps showing recycling hubs (TOO MUCH?)
-
-### Donate your device
-
-Contact info form with device info.
-
-  * Name
-
-  * Phone number
-
-  * Address
-
-  * Type of device + model number
+2. Entry point: `server.js` - `node server.js`
